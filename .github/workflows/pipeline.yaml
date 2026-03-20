@@ -2,7 +2,7 @@ name: CI PIPELINE
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   build:
@@ -10,12 +10,12 @@ jobs:
     
     steps:
       - name: Checkout code
-        uses: actions/chechout@v5
+        uses: actions/checkout@v4
 
       - name:  Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version: 18
 
       - name: Install dependencies
         run: npm install
